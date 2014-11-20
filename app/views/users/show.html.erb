@@ -1,0 +1,11 @@
+<p>
+  <strong>Nome:</strong>
+  <%= @user.name %>
+</p>
+ 
+<p>
+  <strong>CPF:</strong>
+  <%= @user.cpf %>
+</p>
+
+<%= link_to 'Voltar', users_path %> | <%= link_to 'Editar', edit_user_path(@user) %>
