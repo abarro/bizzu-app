@@ -6,6 +6,7 @@
 		<% @users.each do |user| %>
 		<li><%= user.name %><br>
 			<%= user.cpf %><br>
+			<%= user.sales %><br>
 			<%= link_to 'Ver', user_path(user) %> ou <%= link_to 'Editar', edit_user_path(user) %>
 		</li>
 		<% end %>

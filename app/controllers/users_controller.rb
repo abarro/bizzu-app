@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.order("sales DESC")
   end
 
   def update
@@ -38,6 +38,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :cpf)
+      params.require(:user).permit(:name, :cpf, :sales, :avatar)
     end
 end
