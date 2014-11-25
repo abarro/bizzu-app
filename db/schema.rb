@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20141121155210) do
     t.string   "name"
     t.string   "cpf"
     t.string   "sales"
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar_file_name"
