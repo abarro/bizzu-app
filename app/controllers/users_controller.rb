@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show, :new]
+  # http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show, :new]
+  before_action :logged_in_user, only: [:edit, :update]
+  before_action :correct_user,   only: [:edit, :update]
 
   def new
     @user = User.new
@@ -49,5 +51,16 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :cpf, :sales, :avatar, :email, :password, :password_confirmation)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
     end
 end
