@@ -14,6 +14,12 @@ gem 'spring',        group: :development
 gem 'rails_12factor', group: :production
 gem 'validates_cpf_cnpj'
 gem 'paperclip', '~> 4.2'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
