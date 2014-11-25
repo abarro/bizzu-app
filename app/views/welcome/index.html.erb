@@ -1,3 +1,11 @@
 <h1>Bem vindo ao Bizzu App</h1>
 <%= link_to 'Todos os Vendedores', controller: 'users' %>
-
+<ul>
+	<% @users.each do |user| %>
+	<li><%= user.name %><br>
+		<%= user.cpf %><br>
+		<%= user.sales %><br>
+		<%= image_tag user.avatar.url %>
+	</li>
+	<% end %>
+</ul>
