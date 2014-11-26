@@ -10,4 +10,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get 'regulamento', to: 'welcome#regulamento', as: 'regulamento'
+  get 'regulamento', to: 'welcome#premios', as: 'premios'
+  get 'regulamento', to: 'welcome#ranking', as: 'ranking'
+
   end

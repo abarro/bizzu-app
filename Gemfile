@@ -19,6 +19,7 @@ gem 'devise'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+gem 'refills'
 
 
 # Use ActiveModel has_secure_password

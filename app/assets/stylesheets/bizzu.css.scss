@@ -1,0 +1,21 @@
+@import "normalize";
+@import "bourbon";
+@import "base/base";
+@import "neat";
+@import "refills/navigation";
+@import "notice";
+
+body {
+	
+}
+
+header{
+	@include outer-container;
+}
+main {
+	@include outer-container;
+	padding-top: 70px;
+
+}
+
+

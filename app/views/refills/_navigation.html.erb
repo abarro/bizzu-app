@@ -1,0 +1,49 @@
+<header class="navigation">
+  <div class="menu-wrapper">
+
+    <%= link_to ( image_tag("https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png")), root_path, class: "logo" %>
+    <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li><%= link_to "Ranking", ranking_path, class: "nav-link" %></li>
+        <li><%= link_to "Premios", premios_path, class: "nav-link" %></li>
+        <li><%= link_to "Regulamento", regulamento_path, class: "nav-link" %></li>
+      </ul>
+    </div>
+    <div class="navigation-tools">
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log Out", logout_path, class: "sign-up" %>
+      <% else %>
+        <%= link_to "Entrar", login_path, class: "sign-in" %>
+        <%= link_to "Cadastrar", signup_path, class: "sign-up" %> or
+      <% end %>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+
+    // underline under the active nav item
+    $(".nav .nav-link").click(function() {
+      $(".nav .nav-link").each(function() {
+        $(this).removeClass("active-nav-item");
+      });
+      $(this).addClass("active-nav-item"); 
+      $(".nav .more").removeClass("active-nav-item");
+    });
+  });
+</script>
