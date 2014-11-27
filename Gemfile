@@ -16,9 +16,9 @@ gem 'validates_cpf_cnpj'
 gem 'paperclip', '~> 4.2'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
-gem 'bourbon'
-gem 'neat'
+gem 'bourbon', '3.2'
 gem 'bitters'
+gem 'neat'
 gem 'refills'
 
 
