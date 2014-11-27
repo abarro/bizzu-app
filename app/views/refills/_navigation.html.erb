@@ -12,13 +12,17 @@
     </div>
     <div class="navigation-tools">
       <% if current_user %>
-        Logged in as <%= current_user.email %>.
+        Logado como: <%= current_user.email %>.
+        <%= link_to "Cadastrar Venda", edit_user_path(current_user.id), class: "sign-up" %>
         <%= link_to "Log Out", logout_path, class: "sign-up" %>
       <% else %>
         <%= link_to "Entrar", login_path, class: "sign-in" %>
         <%= link_to "Cadastrar", signup_path, class: "sign-up" %> or
       <% end %>
     </div>
+  </div>
+  <div id="hero">
+    
   </div>
 </header>
 

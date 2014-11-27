@@ -1,11 +1,28 @@
-<h1>Bem vindo ao Bizzu App</h1>
-<%= link_to 'Todos os Vendedores', controller: 'users' %>
-<ul>
-	<% @users.each do |user| %>
-	<li><%= user.name %><br>
-		<%= user.cpf %><br>
-		<%= user.sales %><br>
-		<%= image_tag user.avatar.url %>
-	</li>
-	<% end %>
-</ul>
+<section id="home">
+
+	<article id="ranking">
+		<h1>Veja quem está liderando:</h1>
+		<% @users.order(:sales).each do |user| %>
+			<article class="vendedor">
+				<%= image_tag user.avatar.url, class: "foto"  %>
+				<h3><%= user.name.split.map(&:capitalize).join(' ') %></h3>
+				<div id="vendas">Vendas:
+
+					<% if user.sales == nil %>
+						0
+					<% else %>
+						<%= user.sales %>
+					<% end %>
+
+					<div>
+			</article>
+		<% end %>
+	</article>
+
+	<article id="premios">
+		<h1>Como funciona:</h1>
+		<%= link_to 'Todos os Vendedores', controller: 'users' %>
+	</article>
+
+</secrtion>
+

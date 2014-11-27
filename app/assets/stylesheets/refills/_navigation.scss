@@ -20,6 +20,13 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
+  #hero{
+    @include span-columns(12);
+    display: block;
+    background: url('../assets/header.jpg') no-repeat top left;
+    height: 400px;
+  }
+
   .menu-wrapper {
     @include outer-container;
     @include clearfix;

@@ -1,6 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-    @users = User.order("sales DESC")
+    
+    @users = User.all
+
   end
 
   def regulamento
