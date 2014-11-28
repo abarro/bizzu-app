@@ -1,7 +1,7 @@
 <header class="navigation">
   <div class="menu-wrapper">
 
-    <%= link_to ( image_tag("https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png")), root_path, class: "logo" %>
+    <%= link_to ( image_tag("../assets/home.png")), root_path, class: "logo" %>
     <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
     <div class="nav">
       <ul id="navigation-menu">
@@ -16,8 +16,8 @@
         <%= link_to "Cadastrar Venda", edit_user_path(current_user.id), class: "sign-up" %>
         <%= link_to "Log Out", logout_path, class: "sign-up" %>
       <% else %>
-        <%= link_to "Entrar", login_path, class: "sign-in" %>
-        <%= link_to "Cadastrar", signup_path, class: "sign-up" %> or
+        <%= link_to "Cadastrar Venda", login_path, class: "sign-in" %>
+        <%= link_to "Participar", signup_path, class: "sign-up" %>
       <% end %>
     </div>
   </div>

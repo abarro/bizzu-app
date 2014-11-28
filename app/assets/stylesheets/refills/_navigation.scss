@@ -1,10 +1,10 @@
 header.navigation {
   $navigation-padding: 1em;
-  $navigation-background: $dark-gray;
-  $navigation-color: transparentize(white, 0.3);
-  $navigation-color-hover: white;
+  $navigation-background: #FEF9F5;
+  $navigation-color: #FFC1DA;
+  $navigation-color-hover: darken(#FFC1DA, 40);
   $navigation-height: 60px;
-  $navigation-nav-button-background: $base-accent-color;
+  $navigation-nav-button-background: #FD7E93;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10);
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
   $navigation-search-background: lighten($navigation-background, 5);
@@ -14,8 +14,8 @@ header.navigation {
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 10);
-  font-family: $sans-serif;
+  border-bottom: 2px dashed #FEF7A7;
+  font-family: "Courier New", Courier, monospace;
   height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -23,8 +23,9 @@ header.navigation {
   #hero{
     @include span-columns(12);
     display: block;
-    background: url('../assets/header.jpg') no-repeat top left;
+    background: url('/assets/header.jpg') no-repeat top left;
     height: 400px;
+    border-bottom: 2px dashed #FEF7A7;
   }
 
   .menu-wrapper {
@@ -112,7 +113,7 @@ header.navigation {
     }
 
     a {
-      font-weight: 400;
+      font-weight: 600;
       color: $navigation-color;
 
       &:hover {
@@ -205,13 +206,14 @@ header.navigation {
     float: right;
     @include transition (all 0.2s ease-in-out);
     display: inline;
-    background: $navigation-nav-button-background;
+    background: #fefefe;
     border-radius: $base-border-radius; 
-    color: white;
+    color: #FD7E93;
     font-size: .8em;  
     font-weight: 800;
     padding: .4em 1em;
     text-transform: uppercase;
+    border: 2px dashed #FD7E93;
 
     &:hover {
       background: lighten($navigation-nav-button-background, 10);
@@ -219,9 +221,13 @@ header.navigation {
   }
   a.sign-in{
     @extend a.sign-up;
-    background: gray;
+    background: #fefefe;
     margin-left: 20px;
-    color: #222;
+    color: #A1D4CF;
+    border: 2px dashed #A1D4CF;
+    &:hover{
+      background: #FEF7A7;
+    }
   }
 
   .search-bar {

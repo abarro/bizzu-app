@@ -1,28 +1,29 @@
 <section id="home">
 
 	<article id="ranking">
-		<h1>Veja quem está liderando:</h1>
+		<h2>Veja quem está liderando:</h2>
 		<% @users.order(:sales).each do |user| %>
 			<article class="vendedor">
-				<%= image_tag user.avatar.url, class: "foto"  %>
-				<h3><%= user.name.split.map(&:capitalize).join(' ') %></h3>
-				<div id="vendas">Vendas:
+				<div class="vendas">
 
 					<% if user.sales == nil %>
-						0
+						<span>0</span>
 					<% else %>
-						<%= user.sales %>
+						<span><%= user.sales %></span>
 					<% end %>
 
-					<div>
+				</div>
+				<%= image_tag user.avatar.url, class: "foto"  %>
+				<h3><%= user.name.split.map(&:capitalize).join(' ') %></h3>
+
 			</article>
 		<% end %>
 	</article>
 
 	<article id="premios">
-		<h1>Como funciona:</h1>
+		<h2>Como funciona:</h2>
 		<%= link_to 'Todos os Vendedores', controller: 'users' %>
 	</article>
 
-</secrtion>
+</section>
 

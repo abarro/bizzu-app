@@ -1,6 +1,7 @@
 
 body {
-	
+	background: #FEF9F5;
+	font-family: "Courier New", Courier, monospace;
 }
 
 header{
@@ -19,21 +20,58 @@ form {
 	// @include shift(4);
 }
 
+footer{
+	padding: 60px 0 30px;
+	@include span-columns(12);
+	text-align:center;
+}
+
 .vendedor{
-	@include span-columns(7);
+	@include span-columns(6 of 7);
 	@include omega(n);
+	background-color: white;
 	margin-top: 40px;
+	padding: 10px;
+	border-radius: 15px;
+	.vendas{
+		float: left;
+		display: block;
+		width: 50px;
+		height: 50px;
+		background:url('/assets/trofeu.png') top left;
+		position: relative;
+		span{
+			display: block;
+			width: 30px;
+			top: 2px;
+			left: 11px;
+			position: absolute;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+		}
+	}
 	.foto{
 		float: left;
 		margin: 0 10px;
+		width: 50px;
+		border-radius: 50%;
+		padding: 5px;
+		background: white;
+		border: 2px dashed #FEF7A7;
 	}
 	h3{
-
+		font-weight: normal;
+		padding-top: 12px;
+		
 	}
 }
 
 #home{
 	padding-top: 70px;
+	h2{
+		color:#A1D4CF;
+	}
 	#ranking{
 		@include span-columns(7);
 		
