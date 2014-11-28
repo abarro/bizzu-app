@@ -7,11 +7,5 @@ class WelcomeController < ApplicationController
 
   def regulamento
   end
-
-  def premios
-  end
-
-  def ranking
-  end
   
 end
