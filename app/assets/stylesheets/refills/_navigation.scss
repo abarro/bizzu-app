@@ -200,7 +200,14 @@ header.navigation {
       clear: none;
     }
   }
-
+  #online-as{
+    width: 33%;
+    float: left;
+    padding-top: 20px;
+    font-size: 0.8em;
+    text-align: right;
+    overflow: hidden;
+  }
   a.sign-up {
     margin-top: 13px;
     float: right;
