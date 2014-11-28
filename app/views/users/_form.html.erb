@@ -9,22 +9,13 @@
 		</ul>
 	</div>
 	<% end %>
-	<p>
-		<%= f.label :name %><br>
-		<%= f.text_field :name %>
-	</p>
 
 	 <p>
-		<%= f.label :sales %><br>
+		<%= f.label "Digite abaixo seu número de vendas atualizado:" %><br>
 		<%= f.text_field :sales %>
-	 </p>
-
-	 <p>
-	 	<%= f.label :avatar %><br>
-		<%= f.file_field :avatar %>
 	 </p>
 	 
 	 <p>
-	 	<%= f.submit %>
+	 	<%= f.submit "Atualizar vendas" %>
 	 </p>
 <% end %>

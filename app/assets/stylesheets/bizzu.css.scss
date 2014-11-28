@@ -13,6 +13,7 @@ main {
 }
 section {
 	@include span-columns(12);
+	padding-top: 70px;
 }
 
 form {
@@ -68,7 +69,6 @@ footer{
 }
 
 #home{
-	padding-top: 70px;
 	h2{
 		color:#A1D4CF;
 	}
