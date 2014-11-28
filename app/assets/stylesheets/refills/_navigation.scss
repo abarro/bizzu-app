@@ -23,7 +23,7 @@ header.navigation {
   #hero{
     @include span-columns(12);
     display: block;
-    background: url('/assets/header.jpg') no-repeat top left;
+    background: asset_url('header.jpg') no-repeat top left;
     height: 400px;
     border-bottom: 2px dashed #FEF7A7;
   }
