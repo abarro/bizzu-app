@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.order("sales DESC")
+    @users = User.all
   end
 
   def update

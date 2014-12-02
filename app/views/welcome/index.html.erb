@@ -2,15 +2,12 @@
 
 	<article id="ranking">
 		<h2>Veja quem está liderando:</h2>
-		<% @users.order(:sales).each do |user| %>
+		<% @users.order(sales: :desc).each do |user| %>
 			<article class="vendedor">
-				<div class="vendas">
-
-					<% if user.sales == nil %>
-						<span>0</span>
-					<% else %>
-						<span><%= user.sales %></span>
-					<% end %>
+				<div class="vendas">				
+				
+				<span><%= user.sales.to_i %></span>
+			
 
 				</div>
 				<%= image_tag user.avatar.url, class: "foto"  %>

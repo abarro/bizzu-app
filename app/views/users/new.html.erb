@@ -4,7 +4,7 @@
 <%= form_for @user, :html => { :multipart => true } do |f| %>
 	<% if @user.errors.any? %>
 	<div id="error_explanation">
-		<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+		<p>Veja abaixo porque não pudemos te cadastrar:</p>
 		<ul>
 			<% @user.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
@@ -44,6 +44,7 @@
 	</p>
 	 
 	<p>
+		<%= f.hidden_field :sales, :value => "0" %>
 	 	<%= f.submit "Cadastrar-me" %>
 	</p>
 <% end %>
