@@ -1,6 +1,8 @@
 <section id="home">
 
 	<article id="ranking">
+		<progress value="<%= @sales_total %>" max="10"></progress>
+
 		<h2>Veja quem está liderando:</h2>
 		<% @users.order(sales: :desc).each do |user| %>
 			<article class="vendedor">
@@ -19,7 +21,7 @@
 
 	
 
-	<span>Total: <%= @sales_total %></span>
+	
 	
 	
 
