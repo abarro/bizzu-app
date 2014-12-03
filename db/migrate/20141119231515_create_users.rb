@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :cpf
       t.integer :sales
       t.string :email
-      t.string :password_digest
 
       t.timestamps
     end
