@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
+    if user && User.find_by_cpf(params[:cpf])
       session[:user_id] = user.id
       redirect_to edit_user_path(user), notice: "Logged in!"
     else
