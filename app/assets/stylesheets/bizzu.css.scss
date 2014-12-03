@@ -1,7 +1,7 @@
 
 body {
-	background: #FEF9F5;
-	font-family: "Courier New", Courier, monospace;
+	background: #DEDEDE;
+	font-family: $base-font-family;
 }
 
 header{
@@ -9,11 +9,17 @@ header{
 }
 main {
 	@include outer-container;
+	border: 1px solid silver;
+	margin: 30px auto;
+	box-shadow: 0px 0px 5px 5px rgba(200,200,200,0.5);
 
 }
 section {
 	@include span-columns(12);
-	padding-top: 70px;
+	padding: 40px;
+	background-color: #f1f1f1;
+
+
 }
 
 form {
@@ -33,7 +39,7 @@ footer{
 	background-color: white;
 	margin-top: 40px;
 	padding: 10px;
-	border-radius: 15px;
+	// border-radius: 15px;
 	.vendas{
 		float: left;
 		display: block;
@@ -50,6 +56,7 @@ footer{
 			text-align: center;
 			color: white;
 			font-weight: bold;
+			color: #222;
 		}
 	}
 	.foto{
@@ -59,7 +66,7 @@ footer{
 		border-radius: 50%;
 		padding: 5px;
 		background: white;
-		border: 2px dashed #FEF7A7;
+		border: 2px solid #297597;
 	}
 	h3{
 		font-weight: normal;
@@ -70,11 +77,28 @@ footer{
 
 #home{
 	h2{
-		color:#A1D4CF;
+		color:#555;
+	}
+	h1{
+		margin-bottom: 30px;
 	}
 	#generalbar{
 		@include span-columns(12);
+		@include linear-gradient(#fbfbfb, #fff);
+		border-radius: 90px;
 		margin-bottom: 40px;
+		padding: 10px;
+		border: 1px solid #D6D6D6;
+
+		.progress-bar-indication{
+			@include span-columns(10);
+			margin-top: 57px;
+		}
+		figure{
+			@include span-columns(2);	
+			padding:0;
+			margin: 0;
+		}
 
 	}
 	#ranking{
@@ -88,8 +112,9 @@ footer{
 			margin-bottom: 30px;
 		}
 		div{
-			background-color:#FEE5E9;
-			border-radius: 15px;
+			background-color:#dedede;
+			// border-radius: 15px;
+			color: #555;
 			padding: 15px;
 		}
 	}
@@ -98,17 +123,17 @@ footer{
 	margin: 13px 0 15px 0;
 	@include transition (all 0.2s ease-in-out);
 	display: inline-block;
-	background: #fefefe;
+	background: #CD9E2A;
 	border-radius: $base-border-radius; 
-	color: #FD7E93;
+	color: #FFF;
 	font-size: .8em;  
 	font-weight: 800;
 	padding: .8em 1em;
 	text-transform: uppercase;
-	border: 2px dashed #FD7E93;
+	// border: 2px dashed #FD7E93;
 	&:hover {
-	  background: #FEF7A7;
-	  color: #FD7E93; 
+	  background: #ECBA30;
+	  color: #fff; 
 	}
 }
 

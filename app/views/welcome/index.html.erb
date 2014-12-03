@@ -1,14 +1,14 @@
 <section id="home">
-
+<h1>Total de Cotas Vendidas:</h1>
 	<article id="generalbar">
-		<h1>Comissão Surpresa!</h1>
-		<p>Se vocês venderem todas as cotas a equipe ganha uma comissão surpresa!</p>
-		<p></p>
+		
 		<div class="progress-bar-indication">
 		  <span class="meter" style="width: <%= @sales_total %>%">
-		    <p><%= @sales_total %></p>
+		    <p><%= @sales_total %> de 10</p>
 		  </span>
 		</div>
+		<figure><%= image_tag("bonus.png") %></figure>
+
 	</article>
 
 	<article id="ranking">
