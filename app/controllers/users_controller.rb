@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_url, notice: "Thank you for signing up!"
+      redirect_to root_url, notice: "Obrigado por se registrar"
     else
       render 'new'
     end
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(user_params)
-      redirect_to @user
+      redirect_to root_url, notice: "Cota cadastrada"
     else
       render 'edit'
     end
