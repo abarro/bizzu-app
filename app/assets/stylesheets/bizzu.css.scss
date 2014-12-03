@@ -72,6 +72,11 @@ footer{
 	h2{
 		color:#A1D4CF;
 	}
+	#generalbar{
+		@include span-columns(12);
+		margin-bottom: 40px;
+
+	}
 	#ranking{
 		@include span-columns(7);
 		
@@ -106,5 +111,6 @@ footer{
 	  color: #FD7E93; 
 	}
 }
+
 
 

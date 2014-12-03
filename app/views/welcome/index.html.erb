@@ -1,30 +1,30 @@
 <section id="home">
 
+	<article id="generalbar">
+		<h1>Comissão Surpresa!</h1>
+		<p>Se vocês venderem todas as cotas a equipe ganha uma comissão surpresa!</p>
+		<p></p>
+		<div class="progress-bar-indication">
+		  <span class="meter" style="width: <%= @sales_total %>%">
+		    <p><%= @sales_total %></p>
+		  </span>
+		</div>
+	</article>
+
 	<article id="ranking">
-		<progress value="<%= @sales_total %>" max="10"></progress>
 
 		<h2>Veja quem está liderando:</h2>
 		<% @users.order(sales: :desc).each do |user| %>
 			<article class="vendedor">
 				<div class="vendas">				
-				
-				<span><%= user.sales.to_i %></span>
-			
-
+					<span><%= user.sales.to_i %></span>
 				</div>
 				<%= image_tag user.avatar.url, class: "foto"  %>
 				<h3><%= user.name.split.map(&:capitalize).join(' ') %></h3>
-
 			</article>
 		<% end %>
 	</article>
-
-	
-
-	
-	
-	
-
+		
 	<article id="premios">
 		<h2>Como funciona:</h2>
 		<div>
