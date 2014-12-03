@@ -3,8 +3,8 @@
 	<article id="generalbar">
 		
 		<div class="progress-bar-indication">
-		  <span class="meter" style="width: <%= @sales_total %>%">
-		    <p><%= @sales_total %> de 10</p>
+		  <span class="meter" style="width: <%= @sales_total.to_i * 10 %>%">
+		    <p id="meter-number"><%= @sales_total %> de 10</p>
 		  </span>
 		</div>
 		<figure><%= image_tag("bonus.png") %></figure>
